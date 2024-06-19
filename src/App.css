@@ -1,0 +1,16 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html, body{
+    height: 100%;
+}
+
+@font-face {
+  font-family: 'clashRoyaleFont';
+  src: url(./assets/supercell-magic-webfont.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
