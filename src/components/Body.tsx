@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import Card from "./Card"
 const url = "https://restcountries.com/v3.1/all"
 
-function shuffle(stuff: any[]) {
+function shuffle(stuff: number[]) {
     let currentIndex = stuff.length;
 
   // While there remain elements to shuffle...
@@ -23,8 +23,8 @@ const randomIndexes = Array.from({length: 12}, () => Math.floor(Math.random() * 
 export default function Body({state, setState, checkedCards, setCheckedCards}: {
     state: number;
     setState: Dispatch<SetStateAction<number>>;
-    checkedCards: Array<object>;
-    setCheckedCards: Dispatch<SetStateAction<Array<object>>>
+    checkedCards: Array<string>; // Update the type to Array<string>
+    setCheckedCards: Dispatch<SetStateAction<Array<string>>> // Update the type to Dispatch<SetStateAction<Array<string>>>
   }) {
     const [countries, setCountries] = useState<Array<object>>(Array.from({length: 12}, () => ({})));
     const [isLoading, setIsLoading] = useState(true)
