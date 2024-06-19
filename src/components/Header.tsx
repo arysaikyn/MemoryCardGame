@@ -1,5 +1,3 @@
-import headerImage from '../assets/header.png';
-
 export default function Header({state}: {state: number}) {
     return(
         <div style={{
@@ -9,8 +7,6 @@ export default function Header({state}: {state: number}) {
             alignItems: "center",
             height: "5vh",
             width: "100vw",
-            // backgroundImage: `url(${headerImage})`,
-            // backgroundSize: "300px",
             backgroundColor: "black",
             fontFamily: "clashRoyaleFont",
             color: "white",
