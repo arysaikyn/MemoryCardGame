@@ -62,6 +62,29 @@ export default function Body({state, setState, checkedCards, setCheckedCards}: {
           countries.map(country => {
             return <Card url={(country as { flags: { png: string } }).flags.png} name={(country as { name: { common: string } }).name.common} setScore={setState} checkedCards={checkedCards} setCheckedCards={setCheckedCards}/>
           })}
+          {state == 12 &&
+          <div style={{
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "black",
+            opacity: "0.5",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            color: "white",
+            fontSize: "50px"
+          }}>
+            You won!
+            <button style={{
+              width: "100px",
+              height: "50px"
+            }}
+            onClick={() => window.location.reload()}>Restart?</button>
+          </div>}
         </div>
     )
 }

@@ -42,6 +42,7 @@ export default function Card({url, name, setScore, checkedCards, setCheckedCards
             }
             else{
                 setScore(0);
+                setCheckedCards([]);
             }
         }}
         >
